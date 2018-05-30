@@ -82,5 +82,5 @@ Learn seven:
 	git branch -d dev
 
 Learn eight:
-//解决冲突，在master分支上添加一行
+//解决冲突
 						

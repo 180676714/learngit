@@ -108,5 +108,30 @@ Learn nine:
 	git log --graph --pretty=oneline --abbrev-commit
 
 	//可以看到，使用和不使⽤“Fast forward”模式，是有区别的，区别在于：合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分⽀支，能看出来曾经 做过合并，⽽而fast forward合并就看不出来曾经做过合并。
+
+Learn ten:
+//bug分支
+	//Git还提供了⼀一个stash功能，可以把当前⼯工作现场“储藏”起来，等以后恢复现场后 继续⼯工作:
+	git stash
+	
+	//工作区是干净的，刚才的⼯工作现场存到哪去了?⽤用git stash list命令看看:
+	git stash list
+
+	//工作现场还在，Git把stash内容存在某个地⽅方了，但是需要恢复⼀一下，有两个办法:
+	//一是⽤用git stash apply恢复，但是恢复后，stash内容并不删除，你需要⽤用git stash drop来删 除;
+	//另⼀一种⽅方式是⽤用git stash pop，恢复的同时把stash内容也删了:
+	git stash pop
+
+	//再⽤用git stash list查看，就看不到任何stash内容了:
+	git stash list
+
+	//你可以多次stash，恢复的时候，先⽤用git stash list查看，
+	//然后恢复指定的stash，⽤用命令: 
+	git stash apply stash@{0}
+
+	//小结
+	//修复bug时，我们会通过创建新的bug分⽀支进⾏行修复，然后合并，最后删除;
+	//当手头⼯工作没有完成时，先把⼯工作现场git stash⼀一下，然后去修复bug，
+	//修复后，再git stash pop，回到⼯工作现场。
 	
 						

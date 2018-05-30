@@ -54,4 +54,8 @@ Learn five:
 
 Learn six:
 //远程仓库
+	//关联远程仓库
+	git remote add origin git@server-name:path/repo-name.git
+	//关联后，推送master分支的所有内容到远程库
+	git push -u origin master
 						

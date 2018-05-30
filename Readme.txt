@@ -79,4 +79,5 @@ Learn seven:
 	git merge dev
 
 	//第五步：合并完成之后，就可以放心的删除dev分支了
+	git branch -d dev
 						

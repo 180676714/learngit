@@ -25,3 +25,6 @@ Learn three:
 	//HEAD表示当前的版本
 	//HEAD^表示上一个版本 HEAD^^表示上上一个版本 HEAD～100表示上100个版本
 	git reset --hard HEAD^			//使用git reset命令回退到以前的版本
+	git reset --hard bcc233			//回到某一个版本，包括未来的版本，我胡汉三又回来了
+	
+	cat Readme.txt				//查看内容

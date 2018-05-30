@@ -76,4 +76,7 @@ Learn seven:
 	git checkout master
 
 	//第四步：把dev分支的工作成果合并到master分支
+	git merge dev
+
+	//第五步：合并完成之后，就可以放心的删除dev分支了
 						

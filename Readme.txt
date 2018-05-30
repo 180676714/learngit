@@ -58,4 +58,17 @@ Learn six:
 	git remote add origin git@server-name:path/repo-name.git
 	//关联后，推送master分支的所有内容到远程库
 	git push -u origin master
+	//从远程库客隆
+	git clone git@server-name:path/repo-name.git
+
+Learn seven:
+//分支管理
+	//首先，创建dev分支，然后切换到dev分支上；
+	git checkout -b dev
+	//'-b'参数表示创建并切换，相当于下面两条命令
+	git branch dev
+	git checkout dev
+	
+	//然后，用git branch命令查看当前分支
+	git branch
 						

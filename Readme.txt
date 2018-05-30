@@ -63,12 +63,17 @@ Learn six:
 
 Learn seven:
 //分支管理
-	//首先，创建dev分支，然后切换到dev分支上；
+	//第一步：创建dev分支，然后切换到dev分支上；
 	git checkout -b dev
 	//'-b'参数表示创建并切换，相当于下面两条命令
 	git branch dev
 	git checkout dev
 	
-	//然后，用git branch命令查看当前分支
+	//第二步：用git branch命令查看当前分支
 	git branch
+
+	//第三步：切换回master branch
+	git checkout master
+
+	//第四步：把dev分支的工作成果合并到master分支
 						

@@ -83,4 +83,6 @@ Learn seven:
 
 Learn eight:
 //解决冲突
+	//查看分支合并情况
+	git log --graph --pretty=oneline --abbrev-commit
 						

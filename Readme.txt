@@ -80,4 +80,7 @@ Learn seven:
 
 	//第五步：合并完成之后，就可以放心的删除dev分支了
 	git branch -d dev
+
+Learn eight:
+//解决冲突
 						

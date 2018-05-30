@@ -85,4 +85,28 @@ Learn eight:
 //解决冲突
 	//查看分支合并情况
 	git log --graph --pretty=oneline --abbrev-commit
+
+Learn nine:
+//分支策略
+	//禁用‘fast forward’模式，git就会在merge时生成一个新的commit，这样，从分支历史上就可以查看出分支信息
+
+	//下⾯面我们实战⼀一下--no-ff⽅方式的merge:
+	//首先，仍然创建并切换dev分⽀支:
+	git checkout -b dev
+
+	//修改readme.txt⽂文件，并提交⼀一个新的commit:
+	git add readme.txt
+	git commit -m "add merge"				
+	
+	//现在，我们切换回master:
+	git checkout master
+
+	//准备合并dev分⽀支，请注意--no-ff参数，表⽰示禁⽤用“Fast forward”:
+	git merge --no-ff -m "merge with no-ff" dev
+
+	//因为本次合并要创建⼀一个新的commit，所以加上-m参数，把commit描述写进去。 合并后，我们⽤用git log看看分⽀支历史:
+	git log --graph --pretty=oneline --abbrev-commit
+
+	//可以看到，使用和不使⽤“Fast forward”模式，是有区别的，区别在于：合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分⽀支，能看出来曾经 做过合并，⽽而fast forward合并就看不出来曾经做过合并。
+	
 						

@@ -137,18 +137,33 @@ Learn ten:
 Learn eleven:
 //多人协作
 	//多⼈协作的⼯工作模式通常是这样:
-	//1. ⾸首先，可以试图⽤用git push origin branch-name推送⾃自⼰己的修改;
-	//2. 如果推送失败，则因为远程分⽀支⽐比你的本地更新，需要先⽤用git pull试图合并;
-	//3. 如果合并有冲突，则解决冲突，并在本地提交;
-	//4. 没有冲突或者解决掉冲突后，再⽤用git push origin branch-name推送就能成功!   
-	//如果git pull提⽰示“no tracking information”，则说明本地分⽀支和远程分⽀支的链接关系没
-	//有创建，⽤用命令git branch --set-upstream branch-name origin/branch-name。 这就是多⼈	//人协作的⼯工作模式，⼀一旦熟悉了，就⾮非常简单。
-	//小结
-	//• 查看远程库信息，使⽤用git remote -v;
-	//• 本地新建的分⽀支如果不推送到远程，对其他⼈人就是不可⻅见的;
-	//• 从本地推送分⽀支，使⽤用git push origin branch-name，如果推送失败，先⽤用git pull抓 取远	//程的新提交;
-	//• 在本地创建和远程分⽀支对应的分⽀支，使⽤用git checkout -b branch-name origin/branch- 	//name，本地和远程分⽀支的名称最好⼀一致;
-	//• 建⽴立本地分⽀支和远程分⽀支的关联，使⽤用git branch --set-upstream branch-name origin/	//branch-name;
-	//• 从远程抓取分⽀支，使⽤用git pull，如果有冲突，要先处理冲突。
+	1. ⾸首先，可以试图⽤用git push origin branch-name推送⾃自⼰己的修改;
+	2. 如果推送失败，则因为远程分⽀支⽐比你的本地更新，需要先⽤用git pull试图合并;
+	3. 如果合并有冲突，则解决冲突，并在本地提交;
+	4. 没有冲突或者解决掉冲突后，再⽤用git push origin branch-name推送就能成功!   
+	如果git pull提⽰示“no tracking information”，则说明本地分⽀支和远程分⽀支的链接关系没
+	有创建，⽤用命令git branch --set-upstream branch-name origin/branch-name。 这就是多⼈	人协作的⼯工作模式，⼀一旦熟悉了，就⾮非常简单。
+
+	小结
+	• 查看远程库信息，使⽤用git remote -v;
+	• 本地新建的分⽀支如果不推送到远程，对其他⼈人就是不可⻅见的;
+	• 从本地推送分⽀支，使⽤用git push origin branch-name，如果推送失败，先⽤用git pull抓 取远	程的新提交;
+	• 在本地创建和远程分⽀支对应的分⽀支，使⽤用git checkout -b branch-name origin/branch- 	name，本地和远程分⽀支的名称最好⼀一致;
+	• 建⽴立本地分⽀支和远程分⽀支的关联，使⽤用git branch --set-upstream branch-name origin/	branch-name;
+	• 从远程抓取分⽀支，使⽤用git pull，如果有冲突，要先处理冲突。
+
+Learn twelve:
+//标签管理
+	
+	• 命令git tag name⽤用于新建⼀一个标签，默认为HEAD，也可以指定⼀一个commit id;
+	• -a tagname -m "blablabla..."可以指定标签信息;
+	• -s tagname -m "blablabla..."可以⽤用PGP签名标签;
+	• 命令git tag可以查看所有标签;
+
+//标签操作
+	• 命令git push origin tagname可以推送⼀一个本地标签;
+	• 命令git push origin --tags可以推送全部未推送过的本地标签;
+	• 命令git tag -d tagname可以删除⼀一个本地标签;
+	• 命令git push origin :refs/tags/tagname可以删除⼀一个远程标签。
 	
 						
